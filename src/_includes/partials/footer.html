@@ -1,13 +1,13 @@
 <footer class="{{ 'fixed' if path == 'home' }} bottom-0 text-center w-full py-4">
     <small class="text-gray-500">Copyright ©
-        {{settings.name}}
-        <p id="demo"></p><script>
-const d = new Date();
-let year = d.getFullYear();
-document.getElementById("demo").innerHTML = year;
-</script>. Made with ❤ by
+        {{settings.name}}<span id="demo"></span>. Made with ❤ by
         <a href="{{settings.url}}" target="_blank" class="underline">{{settings.author}}</a>
         •
         <a href="https://github.com/surjithctly/neat-starter" class="underline" target="_blank" rel="noopener">View on Github</a>
     </small>
 </footer>
+<script>
+    const d = new Date();
+    let year = d.getFullYear();
+    document.getElementById("demo").innerHTML = year;
+</script>
