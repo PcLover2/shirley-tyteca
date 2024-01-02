@@ -1,9 +1,9 @@
 items:
-  - text: Noice
-    url: /test page
-  - text: Menu Two
-    url: "#"
-  - text: Menu Three
-    url: "#"
-  - text: Blog
-    url: /blog
+  - text: Thuis
+    url: /
+  - text: Info
+    url: "#info"
+  - text: Sociale Media
+    url: https://www.facebook.com/shirley.tyteca/
+  - text: Admin
+    url: /admin
