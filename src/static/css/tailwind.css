@@ -13,9 +13,13 @@ h3 {
 }
 @media (min-width: 1024px) {
   .lg\:px-0 {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
   }
+}
+
+.logo{
+  max-height: 40px;
 }
 
 /* Syntax Highlighting*/
