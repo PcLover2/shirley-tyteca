@@ -11,6 +11,12 @@ h1 {
 h3 {
   @apply text-2xl font-bold mb-3;
 }
+@media (min-width: 1024px) {
+  .lg\:px-0 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
 
 /* Syntax Highlighting*/
 
