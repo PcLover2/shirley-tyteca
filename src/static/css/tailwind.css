@@ -16,6 +16,9 @@ h3 {
     padding-left: 24px !important;
     padding-right: 24px !important;
   }
+  .lg\:h-screen {
+    height: auto !important;
+  }
 }
 
 .logo{
