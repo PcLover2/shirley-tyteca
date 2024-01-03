@@ -33,9 +33,6 @@ path: home
               <p class="text-base leading-6 text-gray-500 mb-3">
                   <time>
                       {{ post.date | readableDate }}
-                      by
-                      <a>{{ post.data.author }}</a>
-
                   </time>
               </p>
               {% if post.data.description %}
@@ -46,7 +43,7 @@ path: home
 
               <p>
                   <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
-                      Read more →
+                      Lees meer →
                   </a>
               </p>
 
