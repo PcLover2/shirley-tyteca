@@ -18,9 +18,10 @@
   </head>
   <body>
     {% include "./partials/navbar.html" %}
+    <div style="padding-top: 88px;">
+      {{ content | safe }}
 
-    {{ content | safe }}
-
+    </div>
     {% include "./partials/footer.html" %}
 
     <script src="/static/js/alpine.js"></script>
