@@ -31,3 +31,9 @@ body :not(pre) > code[class*="language-"],
 body pre[class*="language-"] {
   @apply bg-gray-800;
 }
+
+.sticky {
+  position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+}
