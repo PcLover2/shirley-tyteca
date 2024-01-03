@@ -36,5 +36,6 @@ body pre[class*="language-"] {
   position: fixed !important;
   top: 0 !important;
   width: 100% !important;
-  background-color: white;
+  left: 0 !important;
+  right: 0 !important;
 }
