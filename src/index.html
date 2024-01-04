@@ -37,11 +37,11 @@ path: home
                         {{ post.date | readableDate }}
                     </time>
                 </p>
-                {% if post.data.content %}
-                    {{ post.data.content | safe }}
+                {% if post.data.description %}
+                    <div>
+                        {{ post.data.description }}
+                    </div>
                 {% endif %}
-                {{ post.data.content | safe }}
-                {{ post.data.content }}
             </article>
         {% endfor %}
   </div>
