@@ -1,9 +1,11 @@
 items:
   - text: Thuis
     url: /
-  - text: Info
-    url: "#info"
-  - text: Sociale Media
-    url: https://www.facebook.com/shirley.tyteca/
-  - text: Admin
-    url: /admin
+  - text: Studiehulp
+    url: /studiehulp
+  - text: Yoga
+    url: /yoga
+  - text: Shirley
+    url: /Shirley
+  - text: Contact
+    url: /contact
