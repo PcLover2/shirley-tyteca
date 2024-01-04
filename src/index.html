@@ -37,9 +37,9 @@ path: home
                         {{ post.date | readableDate }}
                     </time>
                 </p>
-                {% if post.data.description %}
+                {% if post.data.content %}
                 <article class="prose lg:prose-xl my-4 mx-auto">
-                    {{ post.content | safe }}
+                    {{ post.data.content | safe }}
                 </article>
                 {% endif %}
             </article>
