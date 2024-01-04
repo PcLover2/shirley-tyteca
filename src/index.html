@@ -38,10 +38,10 @@ path: home
                     </time>
                 </p>
                 {% if post.data.content %}
-                <article class="prose lg:prose-xl my-4 mx-auto">
                     {{ post.data.content | safe }}
-                </article>
                 {% endif %}
+                {{ post.data.content | safe }}
+                {{ post.data.content }}
             </article>
         {% endfor %}
   </div>
