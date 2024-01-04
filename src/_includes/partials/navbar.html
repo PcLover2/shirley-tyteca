@@ -24,15 +24,15 @@
                             <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
                         </li>
                     {% endfor %}
+                    <li class="nav__item mr-3">
+                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4" href="/admin"></a>
+                    </li>
+                    <li class="nav__item mr-3">
+                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4" href="https://www.facebook.com/shirley.tyteca/"><i class="fab fa-facebook-f	"></i></a>
+                    </li>
                 </ul>
 
             {% endif %}
-
-            <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
-                <li class="nav__item mr-3">
-                    <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4" href="/admin"></a>
-                </li>
-            </ul>
         </div>
     </nav>
 </div>
