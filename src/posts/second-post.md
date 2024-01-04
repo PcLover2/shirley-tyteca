@@ -6,6 +6,7 @@ description: Bring to the table win-win survival strategies to ensure proactive
   solution.
 author: Surjith S M
 date: 2020-09-02
+image: /static/img/895x1200.jpg
 tags:
   - number-2
 ---
