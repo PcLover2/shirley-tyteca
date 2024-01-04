@@ -39,3 +39,7 @@ body pre[class*="language-"] {
   left: 0 !important;
   right: 0 !important;
 }
+
+body{
+  font-family: 'Caveat', cursive !important;
+}
