@@ -40,7 +40,11 @@ path: home
                       {{ post.data.description }}
                   </p>
               {% endif %}
-
+              {% if post.data.image %}
+                  <img>
+                      {{ post.data.image }}
+                </img>
+              {% endif %}
               <p>
                   <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
                       Lees meer →
