@@ -38,17 +38,10 @@ path: home
                     </time>
                 </p>
                 {% if post.data.description %}
-                    <p class="text-lg text-gray-500 mb-3">
-                        {{ post.data.description }}
-                    </p>
+                <article class="prose lg:prose-xl my-4 mx-auto">
+                    {{ post.content | safe }}
+                </article>
                 {% endif %}
-
-                <p>
-                    <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
-                        Lees meer →
-                    </a>
-                </p>
-
             </article>
         {% endfor %}
   </div>
