@@ -35,20 +35,16 @@ path: home
                       {{ post.date | readableDate }}
                   </time>
               </p>
-              {% if post.data.description %}
-                  <p class="text-lg text-gray-500 mb-3">
-                      {{ post.data.description }}
-                  </p>
-              {% endif %}
-              {% if post.data.image %}
-              <img src="{{ post.data.image }}" alt="">
-              {% endif %}
-              <p>
-                  <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
-                      Lees meer →
-                  </a>
-              </p>
-
+              <div style="display: flex;">
+                {% if post.data.image %}
+                <img style="max-height: 30vh; max-width: 40vw; padding-right: 20px;" src="{{ post.data.image }}" alt="">
+                {% endif %}
+                {% if post.data.description %}
+                    <p class="text-lg text-gray-500 mb-3">
+                        {{ post.data.description }}
+                    </p>
+                {% endif %}
+              </div>
           </article>
       {% endfor %}
   </div>
