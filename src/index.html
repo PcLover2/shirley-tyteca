@@ -3,7 +3,38 @@ layout: default
 title: Shirley Tyteca
 path: home
 ---
+<div class="container max-w-3xl mt-6 px-6">
+    {% set postslist = collections.post %}
 
+    {% for post in postslist | reverse %}
+        <article class="my-8">
+            <h2 class="font-bold text-3xl text-gray-900 mb-2">
+                <a href="{{ post.url | url }}">
+                    {% if post.data.title %}
+                        {{ post.data.title }}
+                    {% else %}
+                        Untitled
+                    {% endif %}
+                </a>
+            </h2>
+            <p class="text-base leading-6 text-gray-500 mb-3">
+                <time>
+                    {{ post.date | readableDate }}
+                </time>
+            </p>
+            <div style="display: flex;">
+              {% if post.data.image %}
+              <img style="max-height: 30vh; padding-right: 20px;" src="{{ post.data.image }}" alt="">
+              {% endif %}
+              {% if post.data.description %}
+                  <p class="text-lg text-gray-500 mb-3">
+                      {{ post.data.description }}
+                  </p>
+              {% endif %}
+            </div>
+        </article>
+    {% endfor %}
+</div>
 <div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
   <h1>
     Welkom op
@@ -16,36 +47,4 @@ path: home
   <p>
     Het aanleren van een studiemethode op maat voor kinderen uit het lager (5e en 6e leerjaar), secundair en hoger onderwijs en universiteit.
   </p>
-  <div class="container max-w-3xl mt-6 px-6">
-      {% set postslist = collections.post %}
-
-      {% for post in postslist | reverse %}
-          <article class="my-8">
-              <h2 class="font-bold text-3xl text-gray-900 mb-2">
-                  <a href="{{ post.url | url }}">
-                      {% if post.data.title %}
-                          {{ post.data.title }}
-                      {% else %}
-                          Untitled
-                      {% endif %}
-                  </a>
-              </h2>
-              <p class="text-base leading-6 text-gray-500 mb-3">
-                  <time>
-                      {{ post.date | readableDate }}
-                  </time>
-              </p>
-              <div style="display: flex;">
-                {% if post.data.image %}
-                <img style="max-height: 30vh; max-width: 40vw; padding-right: 20px;" src="{{ post.data.image }}" alt="">
-                {% endif %}
-                {% if post.data.description %}
-                    <p class="text-lg text-gray-500 mb-3">
-                        {{ post.data.description }}
-                    </p>
-                {% endif %}
-              </div>
-          </article>
-      {% endfor %}
-  </div>
 </div>
