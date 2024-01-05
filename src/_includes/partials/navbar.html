@@ -1,39 +1,48 @@
-<div class="w-full sticky">
-    <nav style="background-color: white;" class="sticky navbar flex items-center justify-center lg:justify-between flex-wrap p-6 lg:px-0 container mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false"  @click.away="isOpen = false">
-        <!--Logo etc-->
-        <div class="flex items-center">
-            <a href="/" class="text-indigo-500 font-bold text-lg"><img class="logo" src="/static/img/logo.png" alt=""></a>
+<nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a href="#">Your Logo</a>
         </div>
+        <div id="mainListDiv" class="main_list">
 
-        <!--Toggle button (hidden on large screens)-->
-        <button @click="isOpen = !isOpen" type="button" class="ml-auto block lg:hidden px-2 text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500" :class="{ 'transition transform-180': isOpen }" aria-label="Menu">
-            <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
-                <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
-            </svg>
-        </button>
-
-        <!--Menu-->
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-center " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" x-show.transition="true">
-
-            {% if navigation.items %}
-
-                <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
-                    {% for item in navigation.items %}
-                        <li style="margin-left: 12px;" class="nav__item mr-3">
-                            <a style="padding-left: 0px; padding-right: 0px;" @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
-                        </li>
-                    {% endfor %}
-                    <li style="margin-left: 12px; min-width: 40px; background-color: #1877F2; border-radius: 1000px;" class="nav__item mr-3">
-                        <a style="color: white; padding-left: 0px; padding-right: 0px;" style="color: white; padding-left: 8px; padding-right: 8px;" @click="isOpen = false" class="text-ml inline-block text-500 no-underline py-2 px-4" href="https://www.facebook.com/shirley.tyteca/"><i class="fab fa-facebook-f	"></i></a>
+            <ul class="navlinks">
+                {% for item in navigation.items %}
+                    <li>
+                        <a href="{{ item.url }}">{{ item.text }}</a>
                     </li>
-                    <li style="margin-top: 12px; margin-left: 12px; min-width: 40px; background-color: #fda75a; border-radius: 1000px;" class="nav__item mr-3">
-                        <a style="color: white; padding-left: 0px; padding-right: 0px;" style="padding-left: 8px; padding-right: 8px;" @click="isOpen = false" class="text-ml inline-block text-500 no-underline py-2 px-4" href="/admin"><i class='fas fa-sign-in-alt'></i></a>
-                    </li>
+                {% endfor %}
+                <li>
+                    <a href="https://www.facebook.com/shirley.tyteca/"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a href="/admin"><i class='fas fa-sign-in-alt'></i></a>
+                </li>
 
-                </ul>
-
-            {% endif %}
+            </ul>
         </div>
-    </nav>
-</div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+</nav>
+
+<section class="home">
+</section>
+
+<!-- Jquery needed -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+<script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+            $('.nav').addClass('affix');
+            console.log("OK");
+        } else {
+            $('.nav').removeClass('affix');
+        }
+    });
+</script>
