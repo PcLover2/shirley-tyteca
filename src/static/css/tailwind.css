@@ -40,6 +40,6 @@ body pre[class*="language-"] {
   right: 0 !important;
 }
 
-body{
+h1, h2, h3 {
   font-family: 'Caveat', cursive !important;
 }
