@@ -1,0 +1,11 @@
+items:
+  - text: Thuis
+    url: /
+  - text: Studiehulp
+    url: /studiehulp
+  - text: Yoga
+    url: /yoga
+  - text: Shirley
+    url: /Shirley
+  - text: Contact
+    url: /contact
