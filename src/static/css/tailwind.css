@@ -36,7 +36,7 @@ body {
 
 .nav div.logo a:hover {
     color: transparent;
-    background: linear-gradient(#1eb2c6, #1ec65e);
+    background: linear-gradient(90deg, #1eb2c6 25%, #00ff61);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
