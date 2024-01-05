@@ -35,8 +35,10 @@ body {
 }
 
 .nav div.logo a:hover {
-    color: #1eb2c6;
-    background-gr
+    color: transparent;
+    background: linear-gradient(#1eb2c6, #1ec65e);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav div.main_list {
