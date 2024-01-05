@@ -22,7 +22,7 @@ body {
 .nav div.logo {
     float: left;
     width: auto;
-    height: auto;
+    height: 80px;
     padding-left: 3rem;
 }
 
