@@ -27,13 +27,15 @@ body {
 }
 
 .nav div.logo a {
+    font-family: ;
     text-decoration: none;
     color: #fff;
     font-size: 2.5rem;
+    transition: 0.3s;
 }
 
 .nav div.logo a:hover {
-    color: #00E676;
+    color: #1eb2c6;
 }
 
 .nav div.main_list {
@@ -62,10 +64,12 @@ body {
     color: #fff;
     line-height: 65px;
     font-size: 2.4rem;
+    transition: 0.3s;
 }
 
 .nav div.main_list ul li a:hover {
-    color: #00E676;
+    color: #1eb2c6;
+
 }
 
 
