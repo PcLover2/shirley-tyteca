@@ -3,7 +3,19 @@ layout: default
 title: Shirley Tyteca
 path: home
 ---
-<div class="container max-w-3xl mt-6 px-6">
+
+<section class="home">
+    <div>
+    <h1>
+        Welkom op
+        <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500">
+        Shirley Tyteca's
+        </strong>
+        website
+    </h1>
+    </div>
+</section>
+<div>
     {% set postslist = collections.post %}
 
     {% for post in postslist | reverse %}
@@ -18,28 +30,15 @@ path: home
                 </a>
             </h3>
             <div style="display: flex;">
-              {% if post.data.image %}
-              <img style="max-height: 10vh; padding-right: 20px;" src="{{ post.data.image }}" alt="">
-              {% endif %}
-              {% if post.data.description %}
-                  <p class="text-lg text-gray-500 mb-3">
-                      {{ post.data.description }}
-                  </p>
-              {% endif %}
+            {% if post.data.image %}
+            <img style="max-height: 10vh; padding-right: 20px;" src="{{ post.data.image }}" alt="">
+            {% endif %}
+            {% if post.data.description %}
+                <p class="text-lg text-gray-500 mb-3">
+                    {{ post.data.description }}
+                </p>
+            {% endif %}
             </div>
         </article>
     {% endfor %}
-</div>
-<div class="container mx-auto lg:h-screen flex flex-col justify-center items-center">
-  <h1>
-    Welkom op
-    <strong class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500">
-      Shirley Tyteca's
-    </strong>
-    website
-  </h1>
-
-  <p>
-    Het aanleren van een studiemethode op maat voor kinderen uit het lager (5e en 6e leerjaar), secundair en hoger onderwijs en universiteit.
-  </p>
 </div>
