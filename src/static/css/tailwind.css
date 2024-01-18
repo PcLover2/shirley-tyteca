@@ -6,8 +6,8 @@ $breakpoint determines at which width the media query breakpoint will take effec
 
 @font-face {
   font-family: 'Boucherie Cursive';
-  src: url('static/fonts/BoucherieCursiveRegular.woff2') format('woff2'),
-      url('static/fonts/BoucherieCursiveRegular.woff') format('woff');
+  src: url('static/img/fonts/BoucherieCursiveRegular.woff2') format('woff2'),
+      url('static/img/fonts/BoucherieCursiveRegular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
