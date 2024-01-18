@@ -1,40 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      {{title}}
-    </title>
-    <link rel="icon" type="image/png" href="/static/img/logo.png">
-    {% if description %}
-      <meta name="description" content="{{description}}"/>
-    {% endif %}
-    {% block head %}{% endblock %}
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
-    {% if prism == true %}
-      <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
-    {% endif %}
-    <script src="https://kit.fontawesome.com/f126c2b727.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <title>Shirley Tyteca</title>
+      
+      <link rel="preload" href="/fonts/BoucherieCursiveRegular.woff2" as="font" type="font/woff2" crossorigin>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <link rel="icon" type="image/png" href="images/logo.png">
+      <meta name="description" content="Shirley Tyteca uit Koksijde biedt Pralaya-yoga lessen en studiehulp aan, inclusief op maat gemaakte studiemethoden voor kinderen vanaf het 5e en 6e leerjaar, secundair en hoger onderwijs en universiteit. Dit kan indien gewenst gecombineerd worden met yogatechnieken en coaching. Kinderyoga is beschikbaar vanaf 4 jaar!">
+      <meta name="keywords" content="Shirley Tyteca, Koksijde, Pralaya-yoga, Yoga, Yogales, Yogalessen, Studiehulp, Studie, Studiebegeleiding, Studiemethode op maat, Lager onderwijs, 5e leerjaar, 6e leerjaar, Secundair onderwijs, Hoger onderwijs, Universiteit, Yogatechnieken, Coaching, Kinderyoga, Yoga voor kinderen, Persoonlijke coaching, coach, Onderwijsbegeleiding, Yoga en studie">
+      <meta name="author" content="Shirley Tyteca">
+      <script src="js.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&display=swap" rel="stylesheet">
   </head>
-  <body class="fuckgit">
+  <body>
     {% include "./partials/navbar.html" %}
 
-    <div>{{ content | safe }}</div>
+    {{ content | safe }}
 
     {% include "./partials/footer.html" %}
-
-    <script src="/static/js/alpine.js"></script>
-
-    {% if path == "home" %}
-      <!-- Netlify Identity Widget -->
-      <!-- Needed only if you are using Netlify Identity feature -->
-      <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    {% endif %}
-
   </body>
 </html>
