@@ -1,54 +1,22 @@
-<nav class="nav">
-    <div class="container">
-        <div class="logo">
-            <a href="#">Shirley Tyteca</a>
+<section class="navigation">
+    <div class="nav-container">
+      <div style="padding-left: 25px;" class="brand">
+        <a href="/"><img style="height: 79px; padding-top: 15px;" src="images/text.svg" alt=""></a>
+      </div>
+      <nav>
+        <div class="nav-mobile">
+          <a id="nav-toggle" href="#!"><span style="height: 2px;"></span></a>
         </div>
-        <div id="mainListDiv" class="main_list">
-
-            <ul class="navlinks">
-                {% for item in navigation.items %}
-                    <li>
-                        <a href="{{ item.url }}">{{ item.text }}</a>
-                    </li>
-                {% endfor %}
-                <li>
-                    <a href="https://www.facebook.com/shirley.tyteca/"><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li>
-                    <a href="/admin"><i class='fas fa-sign-in-alt'></i></a>
-                </li>
-
-            </ul>
-        </div>
-        <span class="navTrigger">
-            <i></i>
-            <i></i>
-            <i></i>
-        </span>
+        <ul class="nav-list" style="text-align: center;">
+          <!-- Setting the links to #! will ensure that no action takes place on click. -->
+          <li  class="li-link-top"><a class="nav-link" href="/studiehulp">Studiehulp</a></li>
+          <li><a class="nav-link" href="/yoga">Yoga</a></li>
+          <li><a class="nav-link" href="/shirley">Shirley</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+          <li><a class="icon" style="font-size: 30px;" href="https://www.facebook.com/shirley.tyteca/"><i class="ri-facebook-circle-fill"></i></a></li>
+          <li><a class="icon" style="font-size: 30px;" href="https://www.instagram.com/shirley.tyteca"><i class="ri-instagram-fill"></i></i></a></li>
+          <li><a class="icon" style="font-size: 30px;" href="/admin"><i class="ri-login-circle-fill"></i></a></li>
+        </ul>
+      </nav>
     </div>
-</nav>
-
-<!-- Jquery needed -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script>
-$('.navTrigger').click(function () {
-    $(this).toggleClass('active');
-    console.log("Clicked menu");
-    $("#mainListDiv").toggleClass("show_list");
-    $("#mainListDiv").fadeIn();
-
-});
-
-</script>
-
-<!-- Function used to shrink nav bar removing paddings and adding black background -->
-<script>
-    $(window).scroll(function() {
-        if ($(document).scrollTop() > 50) {
-            $('.nav').addClass('affix');
-            console.log("OK");
-        } else {
-            $('.nav').removeClass('affix');
-        }
-    });
-</script>
+  </section>
