@@ -1,364 +1,425 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
-html,
+@charset "UTF-8";
+/* 
+$content-width will be the max width of the content within the navigation bar. 
+$breakpoint determines at which width the media query breakpoint will take effect.
+*/
+
+@font-face {
+  font-family: 'Boucherie Cursive';
+  src: url('static/fonts/BoucherieCursiveRegular.woff2') format('woff2'),
+      url('static/fonts/BoucherieCursiveRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Quicksand", sans-serif;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  scroll-behavior: smooth
 }
 
-/* Navbar section */
+body {
+  background-color: #ffffff;
+  margin: 0px;
+  font-family: 'DM Sans', sans-serif;
+}
 
-.nav {
-    width: 100%;
-    height: 80px;
+h3{
+  font-size: 5em;
+  margin-top: 25px;
+}
+
+/* Nav */
+
+  .navigation{
+    z-index: 900;
     position: fixed;
-    line-height: 80px;
-    text-align: center;
-    font-size: 62.5%;
-    font-size: 10px;
-}
+    width: 100vw;
+  }
 
-.nav div.logo {
-    float: left;
-    width: auto;
-    height: 80px;
-    padding-left: 3rem;
-}
-
-.nav div.logo a {
-    font-family: 'Caveat', cursive;
-    text-decoration: none;
-    color: #fff;
-    font-size: 2.5rem;
-    transition: 0.3s;
-}
-
-.nav div.logo a:hover {
-  color: #1eb2c6;
-  transition: 0.3s;
-}
-
-.nav div.main_list {
-    height: 80px;
+  nav {
     float: right;
-}
-
-.nav div.main_list ul {
-    width: 100%;
-    height: 80px;
-    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.nav div.main_list ul li {
-    width: auto;
-    height: 80px;
-    padding: 0;
-    padding-right: 3rem;
-}
-
-.nav div.main_list ul li a {
-    text-decoration: none;
-    color: #fff;
-    line-height: 80px;
-    font-size: 2.4rem;
-    transition: 0.3s;
-}
-
-.nav div.main_list ul li a:hover {
-    color: #1eb2c6;
-
-}
-
-
-/* Home section */
-
-.home {
-    width: 100%;
-    height: 100vh;
-    background-image: url(/static/img/shishi3.png);
-    background-position: center top;
-	background-size:cover;
-}
-
-.navTrigger {
-    display: none;
-}
-
-.nav {
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-}
-
-
-/* Media qurey section */
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .container {
-        margin: 0;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .navTrigger {
-        display: block;
-    }
-    .nav div.logo {
-        margin-left: 15px;
-    }
-    .nav div.main_list {
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-    }
-    .nav div.show_list {
-        height: auto;
-        display: none;
-    }
-    .nav div.main_list ul {
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background-color: #111;
-        /*same background color of navbar*/
-        background-position: center top;
-    }
-    .nav div.main_list ul li {
-        width: 100%;
-        text-align: center;
-    }
-    .nav div.main_list ul li a {
-        text-align: center;
-        width: 100%;
-        font-size: 3rem;
-        padding: 20px;
-    }
-    .nav div.media_button {
-        display: block;
-    }
-}
-
-
-/* Animation */
-/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
-
-.navTrigger {
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    margin: auto;
-    position: absolute;
-    right: 30px;
-    top: 0;
-    bottom: 0;
-}
-
-.navTrigger i {
-    background-color: #fff;
-    border-radius: 2px;
-    content: '';
+    background-color: #1a535c;
+  }
+  nav ul li {
+    float: left;
+    position: relative;
+  }
+  nav ul li a {
     display: block;
-    width: 100%;
-    height: 4px;
+    padding: 0 20px;
+    line-height: 70px;
+    background: #1A535C;
+    color: #ffffff;
+    text-decoration: none;
+    /*
+    The full path of this code is nav ul li a:not(:only-child):after. This means that the code will apply to any a tag in our nav list that is NOT an only child, aka any dropdown. The :after means it comes after the output of the tag. I’ve decided that to specify any nav item as a dropdown, it will be followed by a unicode arrow – ▾ (#9662).
+    */
+  }
+
+  nav ul li a:not(:only-child):after {
+    padding-left: 4px;
+    content: ' ▾';
+  }
+  nav ul li ul li {
+    min-width: 190px;
+  }
+  nav ul li ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+
+  .nav-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #1A535C;
+    height: 70px;
+    width: 70px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .nav-mobile {
+      display: block;
+    }
+
+    nav ul li a:hover {
+      background: #103338;
+      color: #ffffff;
+      transition-duration: 1s;
+    }
+
+    nav {
+      width: 100%;
+      padding: 70px 0 15px;
+    }
+    nav ul {
+      display: none;
+    }
+    nav ul li {
+      float: none;
+    }
+    nav ul li a {
+      padding: 15px;
+      line-height: 20px;
+    }
+    nav ul li ul li a {
+      padding-left: 30px;
+    }
+    .li-link-top{
+      padding-top: 20px;
+    }
+
+    h3{
+      padding-top: 25px;
+      font-size: 3em;
+    }
+
+    .logohero{
+      max-width: 80vw !important;
+      max-height: 40vh;
+    }
+
+    .cards{
+      display: flex; padding: 5vw; min-height: 300px; flex-direction: column;
+    }
+    .studie{
+      background: url(/static/img/studiehulp.jpg), linear-gradient(#1a535c7b,#1a535c7b); background-blend-mode: overlay; background-position: center; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
+    }
+    .studieinfo{
+      padding: 40px 0px;
+      width: 90vw; text-align: center; display: flex; justify-content: center; align-items: center;
+    }
+    .infotitle1{
+      color: #ffffff; font-size: 30px; margin-top: 0px;  margin-bottom: 20px;
+    }
+    .button1{
+      border-radius: 10px; background-color: #ffffff; display: flex;
+    }
+    .buttontext1{
+      color: #1A535C; margin: 8px 40px;
+    }
+    .studieimage{
+      display: none;
+    }
+    .yogainfo{
+      padding: 40px 0px;
+      width: 90vw; text-align: center; display: flex; justify-content: center; align-items: center;
+    }
+    .footer1{
+      display: none !important;
+    }
+    form{
+      align-items: center;
+      text-align: center;
+    }
+    .formcont{
+      text-align: center;
+    }
+  }
+  #nav-toggle {
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+  }
+  #nav-toggle span,
+  #nav-toggle span:before,
+  #nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 3px;
+    width: 30px;
+    background: #ffffff;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+  }
+  #nav-toggle span:before {
+    top: -10px;
+  }
+  #nav-toggle span:after {
+    top: 10px;
+  }
+  #nav-toggle.active span {
+    background-color: transparent;
+  }
+  #nav-toggle.active span:before, #nav-toggle.active span:after {
+    top: 0;
+  }
+  #nav-toggle.active span:before {
+    transform: rotate(45deg);
+  }
+  #nav-toggle.active span:after {
+    transform: rotate(-45deg);
+  }
+
+  @media screen and (min-width: 900px) {
+    .nav-list {
+      display: block !important;
+    }
+
+    .nav-link::before {
+      transition: 300ms;
+      height: 2px;
+      content: "";
+      position: absolute;
+      background-color: #ffffff;
+      width: 0%;
+      bottom: 17px;
+    }
+    
+    .nav-link:hover::before {
+      width: calc(100% - 40px);
+    }
+
+    .icon:hover{
+      font-size: 32px !important;
+      transition-duration: 200ms;
+    }
+    .icon{
+      transition-duration: 200ms;
+    }
+
+    .cards{
+      display: flex; padding: 5vw; min-height: 300px; flex-direction: row;
+    }
+    .studie{
+      width: 45vw; display: flex;
+    }
+    .studieinfo{
+      background: #bacbce; width: 18vw; text-align: center; display: flex; justify-content: center; align-items: center;
+    }
+    .infotitle1{
+      color: #1a535c; font-size: 30px; margin-top: 0px; margin-bottom: 20px;
+    }
+    .button1{
+      border-radius: 10px; background-color: #1a535c; display: flex;
+    }
+    .buttontext1{
+      color: #ffffff; margin: 8px 40px;
+    }
+    .studieimage{
+      width: 27vw; background-image: url(/static/img/studiehulp.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;
+    }
+    .yogainfo{
+      width: 45vw; text-align: center; display: flex; justify-content: center; align-items: center;
+    }
+    .namef{
+      margin-right: 12px;
+    }
+    .mailf{
+      margin-left: 12px;
+    }
+    .namemail{
+      display: flex;
+      flex-direction: row
+    }
+  }
+  /* 
+  .navigation – the outer wrapper for the navbar. Specifies the height and color, and will stretch the full width of the viewport.
+  */
+  .navigation {
+    height: 70px;
+    background: #1A535C;
+  }
+
+  /*
+  .nav-container – the inner wrapper for the navbar. Defines how far the actual content should stretch.
+  */
+  .nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .brand {
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    font-family: 'Caveat', cursive;
+    font-weight: 800;
+    z-index: 999;
+  }
+  .brand a,
+  .brand a:visited {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+.hero{
+  height: 100vh;
+  background-image: url(/static/img/hero.jpg);
+  background-position: center bottom; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  text-align: center;
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.navTrigger i:nth-child(1) {
-    -webkit-animation: outT 0.8s backwards;
-    animation: outT 0.8s backwards;
-    -webkit-animation-direction: reverse;
-    animation-direction: reverse;
+
+
+.logohero{
+  max-width: 50vw;
+  max-height: 40vh;
 }
 
-.navTrigger i:nth-child(2) {
-    margin: 5px 0;
-    -webkit-animation: outM 0.8s backwards;
-    animation: outM 0.8s backwards;
-    -webkit-animation-direction: reverse;
-    animation-direction: reverse;
+a{
+  text-decoration: none;
 }
 
-.navTrigger i:nth-child(3) {
-    -webkit-animation: outBtm 0.8s backwards;
-    animation: outBtm 0.8s backwards;
-    -webkit-animation-direction: reverse;
-    animation-direction: reverse;
+.footer-link{
+  margin: 0px 10px;
+  color: white;
 }
 
-.navTrigger.active i:nth-child(1) {
-    -webkit-animation: inT 0.8s forwards;
-    animation: inT 0.8s forwards;
+.infotitle2{
+  color: #ffffff; font-size: 30px; margin-top: 0px;  margin-bottom: 20px;
+}
+.button2{
+  border-radius: 10px; background-color: #ffffff; display: flex;
+}
+.buttontext2{
+  color: #1a535c; margin: 8px 40px;
+}
+.yoga{
+  background: url(/static/img/yoga.jpg), linear-gradient(#1a535c7b,#1a535c7b); background-blend-mode: overlay; background-position: center; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
+}
+textarea {
+  resize: none;
+  opacity: 0.75;
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
+  font-family: inherit;
+  font-size: 18;
 }
 
-.navTrigger.active i:nth-child(2) {
-    -webkit-animation: inM 0.8s forwards;
-    animation: inM 0.8s forwards;
+textarea:focus{
+  outline: none !important;
+  border:2px solid #1A535C;
+}
+label{
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+}
+#contact{
+  justify-content: center;
+  display: flex;
+  align-items: center;background-image: url(/static/img/contact.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
 }
 
-.navTrigger.active i:nth-child(3) {
-    -webkit-animation: inBtm 0.8s forwards;
-    animation: inBtm 0.8s forwards;
+button{
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
-@-webkit-keyframes inM {
-    50% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(45deg);
-    }
+button:focus{
+  border:2px solid #ffffff;
 }
 
-@keyframes inM {
-    50% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(45deg);
-    }
+.button3{
+  border-radius: 10px; background-color: #1a535c; display: flex;
 }
 
-@-webkit-keyframes outM {
-    50% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(45deg);
-    }
+.buttontext3{
+  color: #ffffff; margin: 8px 40px;
 }
 
-@keyframes outM {
-    50% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(45deg);
-    }
+input{
+  opacity: 0.75;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  padding-left: 8px;
+  font-family: inherit;
+  font-size: 18;
 }
 
-@-webkit-keyframes inT {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(9px) rotate(135deg);
-    }
-}
-
-@keyframes inT {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(9px) rotate(135deg);
-    }
-}
-
-@-webkit-keyframes outT {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(9px) rotate(135deg);
-    }
-}
-
-@keyframes outT {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(9px) rotate(135deg);
-    }
-}
-
-@-webkit-keyframes inBtm {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(-9px) rotate(135deg);
-    }
-}
-
-@keyframes inBtm {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(-9px) rotate(135deg);
-    }
-}
-
-@-webkit-keyframes outBtm {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(-9px) rotate(135deg);
-    }
-}
-
-@keyframes outBtm {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(-9px) rotate(135deg);
-    }
-}
-
-.affix {
-    padding: 0;
-    background-color: #111;
-}
-
-
-
-
-
-
-.myH2 {
-	text-align:center;
-	font-size: 4rem;
-}
-.myP {
-	text-align: justify;
-	padding-left:15%;
-	padding-right:15%;
-	font-size: 20px;
-}
-@media all and (max-width:700px){
-	.myP {
-		padding:2%;
-	}
+input:focus {
+  outline: none !important;
+  border:2px solid #1A535C;
 }
