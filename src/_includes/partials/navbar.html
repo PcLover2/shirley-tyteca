@@ -18,9 +18,7 @@
         <li><a href="/admin"><img class="icon" style="height: 30px;" src="/static/img/icons/login-circle-fill.svg" alt=""></a></li>
       </ul>
     </nav>
-  </div>
-</section>
-<section class="reminder">
+    <section class="reminder">
     {% set postslist = collections.post %}
     {% for post in postslist | reverse %}
         <article class="my-8">
@@ -55,4 +53,6 @@
 
         </article>
     {% endfor %}
+</section>
+  </div>
 </section>
