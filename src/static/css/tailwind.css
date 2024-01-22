@@ -450,3 +450,13 @@ input:focus {
   outline: none !important;
   border:2px solid #1A535C;
 }
+
+.reminder{
+  justify-content: center;
+  width: 100vw;
+  z-index: 850;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 70px;
+}
