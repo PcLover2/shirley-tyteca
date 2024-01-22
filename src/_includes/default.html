@@ -13,20 +13,7 @@
     <meta name="author" content="Shirley Tyteca">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" defer></script>
-    <script defer>
-      (function($) { // Begin jQuery
-          $(function() { // DOM ready
-            // Toggle open and close nav styles on click
-            $('#nav-toggle').click(function() {
-              $('nav ul').slideToggle();
-            });
-            // Hamburger to X toggle
-            $('#nav-toggle').on('click', function() {
-              this.classList.toggle('active');
-            });
-          }); // end DOM ready
-        })(jQuery); // end jQuery
-    </script>
+    <script src"images/script.js" defer></script>
   </head>
   <body>
     {% include "./partials/navbar.html" %}
