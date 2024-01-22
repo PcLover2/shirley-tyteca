@@ -1,37 +1,35 @@
 @font-face {
-  font-family: "remixicon";
-  src: url('https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.eot?t=1705244689813'); /* IE9*/
-  src: url('https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.eot?t=1705244689813#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url("https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.woff2?t=1705244689813") format("woff2"),
-  url("https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.woff?t=1705244689813") format("woff"),
-  url('https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.ttf?t=1705244689813') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.svg?t=1705244689813#remixicon') format('svg'); /* iOS 4.1- */
-  font-display: swap;
-}
-
-[class^="ri-"], [class*=" ri-"] {
-  font-family: 'remixicon' !important;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.ri-facebook-circle-fill:before { content: "\ecba"; }
-.ri-login-circle-fill:before { content: "\eed5"; }
-.ri-instagram-fill:before { content: "\ee65"; }
-
-@charset "UTF-8";
-/* 
-$content-width will be the max width of the content within the navigation bar. 
-$breakpoint determines at which width the media query breakpoint will take effect.
-*/
-
-@font-face {
   font-family: 'Boucherie Cursive';
-  src: url('../img/fonts/BoucherieCursiveRegular.woff2') format('woff2'),
-      url('../img/fonts/BoucherieCursiveRegular.woff') format('woff');
+  src: url('/static/img/fonts/BoucherieCursive/BoucherieCursiveRegular.woff2') format('woff2'),
+      url('/static/img/fonts/BoucherieCursive/BoucherieCursiveRegular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/static/img/fonts/DMSans/dm-sans-v14-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('/static/img/fonts/DMSans/dm-sans-v14-latin-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+}
+@font-face {
+  font-display: swap;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/static/img/fonts/DMSans/dm-sans-v14-latin-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('/static/img/fonts/DMSans/dm-sans-v14-latin-500.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+}
+@font-face {
+  font-display: swap;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/static/img/fonts/DMSans/dm-sans-v14-latin-600.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('/static/img/fonts/DMSans/dm-sans-v14-latin-600.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
 }
 
 html {
@@ -80,6 +78,7 @@ h3{
     margin: 0;
     padding: 0;
     background-color: #1a535c;
+    align-items: center;
   }
   nav ul li {
     float: left;
@@ -165,7 +164,7 @@ h3{
       display: flex; padding: 5vw; min-height: 300px; flex-direction: column;
     }
     .studie{
-      background: url(/static/img/studiehulp.jpg), linear-gradient(#1a535c7b,#1a535c7b); background-blend-mode: overlay; background-position: center; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
+      background: url(/static/img/studiehulp.webp), linear-gradient(#1a535c7b,#1a535c7b); background-blend-mode: overlay; background-position: center; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
     }
     .studieinfo{
       padding: 40px 0px;
@@ -196,6 +195,9 @@ h3{
     }
     .formcont{
       text-align: center;
+    }
+    .icon{
+      height: 20px !important;
     }
   }
   #nav-toggle {
@@ -239,7 +241,7 @@ h3{
 
   @media screen and (min-width: 900px) {
     .nav-list {
-      display: block !important;
+      display: flex !important;
     }
 
     .nav-link::before {
@@ -257,7 +259,7 @@ h3{
     }
 
     .icon:hover{
-      font-size: 32px !important;
+      height: 32px !important;
       transition-duration: 200ms;
     }
     .icon{
@@ -283,7 +285,7 @@ h3{
       color: #ffffff; margin: 8px 40px;
     }
     .studieimage{
-      width: 27vw; background-image: url(/static/img/studiehulp.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;
+      width: 27vw; background-image: url(/static/img/studiehulp.webp); background-position: center; background-repeat: no-repeat; background-size: cover;
     }
     .yogainfo{
       width: 45vw; text-align: center; display: flex; justify-content: center; align-items: center;
@@ -334,7 +336,7 @@ h3{
 
 .hero{
   height: 100vh;
-  background-image: url(/static/img/hero.jpg);
+  background-image: url(/static/img/hero.webp);
   background-position: center bottom; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -372,7 +374,7 @@ a{
   color: #1a535c; margin: 8px 40px;
 }
 .yoga{
-  background: url(/static/img/yoga.jpg), linear-gradient(#1a535c7b,#1a535c7b); background-blend-mode: overlay; background-position: center; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
+  background: url(/static/img/yoga.webp), linear-gradient(#1a535c7b,#1a535c7b); background-blend-mode: overlay; background-position: center; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
 }
 textarea {
   resize: none;
@@ -402,7 +404,7 @@ form{
 #contact{
   justify-content: center;
   display: flex;
-  align-items: center;background-image: url(/static/img/contact.jpg);
+  align-items: center;background-image: url(/static/img/contact.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
