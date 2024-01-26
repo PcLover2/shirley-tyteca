@@ -133,6 +133,10 @@ h3{
       width: 100%;
       padding: 70px 0 15px;
     }
+
+    .navigation{
+      top: 0px;
+    }
     nav ul {
       display: none;
     }
@@ -159,6 +163,8 @@ h3{
 
     .postcontcont{
       height: auto !important;
+      position: static !important;
+      margin-top: 70px
     }
 
     .posturl{
