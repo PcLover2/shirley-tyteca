@@ -24,7 +24,7 @@
 {% for post in postslist | reverse %}
     <div class="postcontcont" style="width: 100vw; background-color: white; height: 50px; position: fixed; top: 70px; padding-top: 10px;">
         <div class="nav-container postscontainer">
-            <div class="posttext" style=" line-height: 50px; z-index: 999;">
+            <div class="posttext" style=" line-height: 50px;">
                 <p style="margin: 0px 25px;">
                     {% if post.data.title %}
                         {{ post.data.title }}
