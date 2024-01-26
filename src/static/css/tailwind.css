@@ -150,6 +150,17 @@ h3{
       padding-top: 20px;
     }
 
+    .postscontainer{
+      display: flex;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .postcontcont{
+      height: auto;
+    }
+
     h3{
       font-size: 3em;
     }
@@ -259,6 +270,14 @@ h3{
     
     .nav-link:hover::before {
       width: calc(100% - 40px);
+    }
+
+    .posttext{
+      position: absolute; float: left;
+    }
+
+    .posturl{
+      float: right;
     }
 
     .icon:hover{
