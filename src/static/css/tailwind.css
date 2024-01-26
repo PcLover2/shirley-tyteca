@@ -118,6 +118,14 @@ h3{
     width: 70px;
   }
 
+.close{
+  background-color: white;
+  font-size: 40px;
+  bottom: 11px;
+  position: absolute;
+  right: 20px;
+}
+
   @media only screen and (max-width: 900px) {
     .nav-mobile {
       display: block;
@@ -163,7 +171,6 @@ h3{
 
     .postcontcont{
       height: auto !important;
-      margin-top: 70px
     }
 
     .posturl{
