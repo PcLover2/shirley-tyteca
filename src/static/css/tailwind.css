@@ -158,7 +158,15 @@ h3{
     }
 
     .postcontcont{
-      height: auto;
+      height: auto !important;
+    }
+
+    .posturl{
+      background-color: #b5d1ff;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+      margin-bottom: 20px !important;
+      border-radius: 5px !important;
     }
 
     h3{
@@ -274,6 +282,9 @@ h3{
 
     .posttext{
       position: absolute; float: left;
+    }
+    .postimg{
+      margin-right: 20px;
     }
 
     .posturl{
