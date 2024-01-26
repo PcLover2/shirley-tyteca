@@ -23,6 +23,7 @@
 {% set postslist = collections.post %}
 {% for post in postslist | reverse %}
     <section class="postcontcont" style="max-width:100%; width: 100vw; background-color: white; height: 50px; position: fixed; top: 70px; padding-top: 10px;">
+        <button type='button' class='close' onclick='$(this).parent().remove();'>×</button>
         <div class="nav-container postscontainer">
             <div class="posttext" style=" line-height: 50px;">
                 <p style="margin: 0px 25px;">
