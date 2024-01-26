@@ -20,22 +20,3 @@
     </nav>
   </div>
 </section>
-{% set postslist = collections.post %}
-{% for post in postslist | reverse %}
-    <div class="postcontcont" style="max-width:100%; width: 100vw; background-color: white; height: 50px; position: fixed; top: 70px; padding-top: 10px;">
-        <div class="nav-container postscontainer">
-            <div class="posttext" style=" line-height: 50px;">
-                <p style="margin: 0px 25px;">
-                    {% if post.data.title %}
-                        {{ post.data.title }}
-                    {% else %}
-                        Untitled
-                    {% endif %}
-                </p>
-            </div>
-            <div class="posturl">
-                <a href="{{ post.data.facebookurl }}" style="display: flex;"><p style="margin-right: 25px; color: black; text-decoration: underline;">Zie Facebook </p><img class="postimg" style="margin-right: 0px; margin-top: 10px; height: 30px;" src="/static/img/icons/facebook-circle-fill-black.svg" alt=""></a></a>
-            </div>
-        </div>
-    </div>
-{% endfor %}
