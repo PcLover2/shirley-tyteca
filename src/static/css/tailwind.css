@@ -162,7 +162,7 @@ h3{
       padding-top: 20px;
     }
 
-    .postscontainer{
+    .scontainer{
       display: flex;
       align-items: center;
       text-align: center;
@@ -170,6 +170,7 @@ h3{
     }
 
     .postcontcont{
+      box-shadow: 0px 0px 20px #0000006b;
       height: auto !important;
     }
 
@@ -301,6 +302,7 @@ h3{
 
     .postcontcont{
       padding-bottom: 10px;
+      box-shadow: 0px 0px 20px #0000006b;
     }
     .posturl{
       float: right;
