@@ -293,8 +293,12 @@ h3{
       margin-right: 20px;
     }
 
+    .postcontcont{
+      padding-bottom: 10px;
+    }
     .posturl{
       float: right;
+      margin-right: 20px !important;
     }
 
     .icon:hover{
@@ -448,6 +452,7 @@ form{
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
+  max-width:100%;
 }
 
 button{
