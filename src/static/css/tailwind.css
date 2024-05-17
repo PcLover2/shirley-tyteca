@@ -314,7 +314,6 @@ h3{
 
     .postcontcont{
       padding-bottom: 10px;
-      box-shadow: 0px 0px 20px #0000006b;
     }
     .posturl{
       float: right;
@@ -399,7 +398,7 @@ h3{
 
 .hero{
   height: 100vh;
-  background-color: #a3c9f1;
+  background-color: #ffffff;
   text-align: center;
   color: #21282c;
   display: flex;
