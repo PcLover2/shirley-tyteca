@@ -275,7 +275,11 @@ h3{
       display: flex !important;
     }
 
-    .herotext, .logohero{
+    .herotext{
+      flex: 50%;
+    }
+
+    .logohero{
       flex: 50%;
     }
 
@@ -391,10 +395,7 @@ h3{
 
 .hero{
   height: 100vh;
-  background-image: url(/static/img/sea.jpg);
-  background-position: center bottom; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-color: aliceblue;
   text-align: center;
   color: #21282c;
   display: flex;
