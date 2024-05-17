@@ -279,7 +279,7 @@ h3{
       flex: 50%;
     }
 
-    .logohero{
+    .logo{
       flex: 50%;
     }
 
@@ -395,20 +395,13 @@ h3{
 
 .hero{
   height: 100vh;
-  background-color: aliceblue;
+  background-color: #a3c9f1;
   text-align: center;
   color: #21282c;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-}
-
-
-
-.logohero{
-  max-width: 50vw;
-  max-height: 40vh;
 }
 
 a{
