@@ -279,7 +279,7 @@ h3{
       translate: 0px 10%;
       text-align:left;
       margin-left:0;
-      padding-left:50px;
+      padding-left:5vw;
       flex: 60%;
     }
 
@@ -315,6 +315,7 @@ h3{
 
     .postcontcont{
       padding-bottom: 10px;
+      z-index: 800;
     }
     .posturl{
       float: right;
@@ -398,7 +399,8 @@ h3{
   }
 
 .hero{
-  height: 100vh;
+  padding-top: 145px;
+  height: auto;
   background-color: #ffffff;
   text-align: center;
   color: #21282c;
