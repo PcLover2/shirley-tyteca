@@ -200,7 +200,7 @@ h3{
       display: flex; padding: 5vw; min-height: 500px; flex-direction: column;
     }
     .studie{
-      background: url(/static/img/studiehulp.webp), linear-gradient(#1a535c7b,#1a535c7b); background-blend-mode: overlay; background-position: center; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
+      background: url(/static/img/MOMENTSBYMAGA-ShishiYOGA-52.jpg), linear-gradient(#1a535c7b,#1a535c7b); background-blend-mode: overlay; background-position: center; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
     }
     .studieinfo{
       padding: 40px 0px;
@@ -335,7 +335,7 @@ h3{
     }
 
     .cards{
-      display: flex; padding: 5vw; min-height: 300px; flex-direction: row;
+      display: flex; padding: 5vw; min-height: 500px; flex-direction: row;
     }
     .studie{
       width: 45vw; display: flex;
@@ -353,7 +353,7 @@ h3{
       color: #ffffff; margin: 8px 40px;
     }
     .studieimage{
-      width: 27vw; background-image: url(/static/img/yoga.webp); background-position: center; background-repeat: no-repeat; background-size: cover;
+      width: 27vw; background-image: url(/static/img/MOMENTSBYMAGA-ShishiYOGA-52.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;
     }
     .yogainfo{
       width: 45vw; text-align: center; display: flex; justify-content: center; align-items: center;
@@ -433,7 +433,7 @@ a{
   color: #1a535c; margin: 8px 40px;
 }
 .yoga{
-  background: url(/static/img/hero.webp); background-position: bottom; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
+  background: url(/static/img/yoga.webp); background-position: bottom; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
 }
 textarea {
   resize: none;
