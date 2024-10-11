@@ -200,6 +200,7 @@ h3{
       display: flex; padding: 5vw; min-height: 500px; flex-direction: column;
     }
     .studie{
+      height: 300px;
       background: url(/static/img/MOMENTSBYMAGA-ShishiYOGA-52.jpg), linear-gradient(#1a535c7b,#1a535c7b); background-blend-mode: overlay; background-position: center; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
     }
     .studieinfo{
@@ -221,6 +222,9 @@ h3{
     .yogainfo{
       padding: 40px 0px;
       width: 90vw; text-align: center; display: flex; justify-content: center; align-items: center;
+    }
+    .yoga{
+      height: 200px;
     }
     .footer1{
       display: none !important;
