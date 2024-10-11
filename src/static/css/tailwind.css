@@ -187,7 +187,8 @@ h3{
     }
 
     .logoimg{
-      height: 100%;
+      translate: 0px 10px;
+      width: 100%;
     }
     .hero{
       flex-direction: column;
