@@ -55,7 +55,7 @@ body {
 }
 
 h3{
-  font-size: 5em;
+  font-size: 4em;
   margin: 25px;
   line-height: 1em;
 }
@@ -193,6 +193,7 @@ h3{
     .hero{
       flex-direction: column;
       overflow: hidden;
+      height: fit-content !important;
     }
 
     .cards{
@@ -403,7 +404,7 @@ h3{
 
 .hero{
   padding-top: 145px;
-  height: 60vh;
+  height: 500px;
   background-color: #ffffff;
   text-align: center;
   color: #21282c;
