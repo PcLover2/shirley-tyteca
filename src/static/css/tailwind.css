@@ -189,6 +189,10 @@ h3{
     .logohero{
       max-width: 80vw !important;
       max-height: 40vh;
+      padding-bottom: 20px;
+    }
+    .hero{
+      flex-direction: column-reverse;
     }
 
     .cards{
