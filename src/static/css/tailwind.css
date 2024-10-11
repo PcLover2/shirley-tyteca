@@ -287,8 +287,7 @@ h3{
     }
 
     .logohero{
-      flex: 40%;
-      overflow: hidden;
+      height: inherit;
     }
 
     nav ul li a {
