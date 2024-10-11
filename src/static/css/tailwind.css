@@ -197,7 +197,7 @@ h3{
     }
 
     .cards{
-      display: flex; padding: 5vw; min-height: 300px; flex-direction: column;
+      display: flex; padding: 5vw; min-height: 500px; flex-direction: column;
     }
     .studie{
       background: url(/static/img/studiehulp.webp), linear-gradient(#1a535c7b,#1a535c7b); background-blend-mode: overlay; background-position: center; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
