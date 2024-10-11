@@ -186,13 +186,12 @@ h3{
       font-size: 3em;
     }
 
-    .logohero{
-      max-width: 80vw !important;
-      max-height: 40vh;
-      padding-bottom: 20px;
+    .logoimg{
+      height: 100%;
     }
     .hero{
-      flex-direction: column-reverse;
+      flex-direction: column;
+      overflow: hidden;
     }
 
     .cards{
@@ -432,7 +431,7 @@ a{
   color: #1a535c; margin: 8px 40px;
 }
 .yoga{
-  background: url(/static/img/hero.webp); background-position: center; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
+  background: url(/static/img/hero.webp); background-position: bottom; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
 }
 textarea {
   resize: none;
