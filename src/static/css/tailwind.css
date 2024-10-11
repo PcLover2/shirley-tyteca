@@ -352,7 +352,7 @@ h3{
       color: #ffffff; margin: 8px 40px;
     }
     .studieimage{
-      width: 27vw; background-image: url(/static/img/studiehulp.webp); background-position: center; background-repeat: no-repeat; background-size: cover;
+      width: 27vw; background-image: url(/static/img/yoga.webp); background-position: center; background-repeat: no-repeat; background-size: cover;
     }
     .yogainfo{
       width: 45vw; text-align: center; display: flex; justify-content: center; align-items: center;
@@ -432,7 +432,7 @@ a{
   color: #1a535c; margin: 8px 40px;
 }
 .yoga{
-  background: url(/static/img/yoga.webp), linear-gradient(#1a535c7b,#1a535c7b); background-blend-mode: overlay; background-position: center; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
+  background: url(/static/img/hero.webp); background-position: center; background-repeat: no-repeat; background-size: cover; width: 90vw; display: flex;
 }
 textarea {
   resize: none;
