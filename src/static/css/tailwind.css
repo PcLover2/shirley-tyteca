@@ -131,6 +131,10 @@ h3{
       display: block;
     }
 
+    .yogakaart{
+      display: block;
+    }
+
     nav ul li a:hover {
       background: #103338;
       color: #ffffff;
@@ -282,6 +286,14 @@ h3{
   @media screen and (min-width: 900px) {
     .nav-list {
       display: flex !important;
+    }
+    .yogakaart{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .kaartje{
+      margin-left: 20px;
     }
 
     .herotext{
