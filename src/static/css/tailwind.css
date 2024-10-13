@@ -130,7 +130,20 @@ h3{
     .nav-mobile {
       display: block;
     }
+    .yogahero{
+      height: 250px !important;
+      display: block;
+    }
 
+    .yogaherotext{
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.7);
+      text-align: left;
+      margin-left: 0;
+      margin-left: 5vw;
+      margin-right: 5vw;
+      color: black;
+    }
     .yogakaart{
       display: block;
     }
