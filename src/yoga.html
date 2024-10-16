@@ -3,7 +3,7 @@ layout: default
 title: Shirley Tyteca
 path: home
 ---
-<div class="hero yogahero" style="background-color: #00cebd; padding-bottom: 20px; padding-top: 100px !important;">
+<div class="hero yogahero" style="background-color: #00cebd; padding-bottom: 20px; padding-top: 100px !important; height: auto;">
   <div class="herotext yogaherotext" style="text-align: left;margin-left: 0px; padding-left: 5vw; padding-right: 5vw; color: white;">
     <h3 style="margin: 0px; padding: 8px;">Yoga</h3>
     <p style="padding: 8px;">Something for your mind, your body & your soul</p>
@@ -11,14 +11,16 @@ path: home
 </div>
 <div class="content">
   <section>
-    <div style="display: flex; flex-direction: row; height: fit-content;">
+    <div class="imageflexer" style="display: flex; flex-direction: row; height: fit-content;">
       <div style="flex: 55%;">
         <p>Wil je meer lichaamsbewustzijn creëren? Zoek je een yogavorm waarbij je zowel aan kracht als aan flexibiliteit wint?</p>
         <p>Pralaya yoga is een actieve yogavorm waarbij we gericht gaan werken met spieren en spiergroepen. We versterken de zwakke spieren en maken de stramme spieren los. Daarnaast leren we verbindingen voelen in ons lichaam zodat er op termijn meer lichaamsbewustzijn ontstaat.</p>
         <p>Tijdens de les probeer ik te beantwoorden aan de noden van de yogi(‘s). We vetrekken vanuit lichamelijke klachten en/ of zetten (preventief) in op blessures. </p>
         <p>Gezien er een aantal basistechnieken zijn in de Pralaya yoga raad ik je aan om te starten met beginnerslessen.</p>
       </div>
-      <div style="background-image: url(/static/img/yoga.webp); background-size: cover; height: inherit; width: 100%;"></div>
+      <div style="flex: 45%; position: relative;">
+        <div style="background-image: url(/static/img/yoga.webp); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+      </div>
     </div>
     <div class="italic-quote">
       ‘De yogalessen van Shirley worden op een erg rustige en prettige manier gegeven. Er wordt duidelijk uitleg gegeven
@@ -94,6 +96,8 @@ path: home
     background-color: #1a535c !important;
   }
 
+
+
   .content h3 {
     font-size: 1.2em;
     margin: 0;
@@ -155,7 +159,7 @@ path: home
   }
 
   /* Mobile styles */
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     /* Reduce padding on mobile for better fit */
     .content {
         padding: 15px;
@@ -169,6 +173,10 @@ path: home
 
     .schedule-table {
         min-width: 100%;
+    }
+
+    .imageflexer{
+        flex-direction: column;
     }
   }
 </style>
