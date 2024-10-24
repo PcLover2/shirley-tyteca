@@ -19,7 +19,7 @@ path: home
         <p>Gezien er een aantal basistechnieken zijn in de Pralaya yoga raad ik je aan om te starten met beginnerslessen.</p>
       </div>
       <div style="flex: 45%; position: relative;">
-        <div style="background-image: url(/static/img/yoga.webp); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+        <div class="imgflexie" style="background-image: url(/static/img/yoga.webp);"></div>
       </div>
     </div>
     <div class="italic-quote">
@@ -87,6 +87,13 @@ path: home
     padding: 15px;
     text-align: center;
     margin: 20px 0;
+  }
+
+  .imgflexie{
+    background-size: cover;
+    background-position: center;
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    margin-left: 30px;
   }
 
   .cta a {
@@ -177,6 +184,12 @@ path: home
 
     .imageflexer{
         flex-direction: column;
+    }
+    .imgflexie{
+      height: 300px;
+      width: 100%;
+      position: relative !important;
+      margin: 0px !important;
     }
   }
 </style>
