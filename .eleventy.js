@@ -9,6 +9,12 @@ module.exports = function (eleventyConfig) {
 
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
+  
+  eleventyConfig.addCollection("events", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/events/*.md").sort((a, b) => {
+      return b.date - a.date; // newest first
+    });
+  });
 
   // human readable date
   eleventyConfig.addFilter("readableDate", (dateObj) => {
