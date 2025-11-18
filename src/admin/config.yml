@@ -1,17 +1,14 @@
 backend:
-  # Use netlify identity as backend
   name: git-gateway
   branch: master
-  ### enable below lines for github integration ###
-  # name: github
-  # repo: surjithctly/neat-starter
+
 media_folder: "src/static/img"
 public_folder: "/static/img"
 
-# Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
-# publish_mode: editorial_workflow
+
 collections:
+  # Blog stays as-is
   - label: "Blog"
     name: "blog"
     folder: "src/posts"
@@ -21,3 +18,26 @@ collections:
     fields:
       - { label: "Text", name: "title", widget: "string" }
       - { label: "Facebook Link", name: "facebookurl", widget: "string", default: "https://www.facebook.com/shirley.tyteca/" }
+
+  # NEW Events collection
+  - label: "Events"
+    name: "events"
+    folder: "src/events"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime" }
+      - { label: "Locatie", name: "location", widget: "string", required: false }
+      - { label: "Prijs", name: "price", widget: "string", required: false }
+      - label: "Afbeeldingen"
+        name: "images"
+        widget: "list"
+        allow_add: true
+        field:
+          label: "Afbeelding"
+          name: "image"
+          widget: "image"
+      - { label: "Beschrijving", name: "body", widget: "markdown" }
