@@ -80,9 +80,10 @@ path: home
   </div>
 
   <!-- Remaining images -->
-  {% for img in event.data.images | slice(1) %}
-    <img src="{{ img }}" alt="{{ event.data.title }} - Afbeelding">
-  {% endfor %}
+{% for img in event.data.images | split(",") | slice(1) %}
+  <img src="{{ img }}" alt="{{ event.data.title }} - Afbeelding">
+{% endfor %}
+
 {% endif %}
 
 
