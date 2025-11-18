@@ -29,9 +29,6 @@ collections:
       preview: false
     fields:
       - { label: "Titel", name: "title", widget: "string" }
-      - { label: "Datum", name: "datum", widget: "string" }
-      - { label: "Locatie", name: "location", widget: "string", required: false }
-      - { label: "Prijs", name: "price", widget: "string", required: false }
       - label: "Afbeeldingen"
         name: "images"
         widget: "list"
