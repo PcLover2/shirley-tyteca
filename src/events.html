@@ -80,10 +80,9 @@ path: home
   </div>
 
   <!-- Remaining images -->
-{% for img in event.data.images | split(",") | slice(1) %}
-  <img src="{{ img }}" alt="{{ event.data.title }} - Afbeelding">
-{% endfor %}
-
+  {% for img in event.data.images | slice(1) %}
+    <img src="{{ img }}" alt="{{ event.data.title }} - Afbeelding">
+  {% endfor %}
 {% endif %}
 
 
@@ -243,3 +242,23 @@ path: home
     }
   }
 </style>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('img').forEach(img => {
+    if (img.src.includes(',')) {
+      const urls = img.src.split(',');
+      urls.shift(); // remove the first image
+
+      const newImgs = urls.map(url => {
+        const newImg = document.createElement('img');
+        newImg.src = url.trim();
+        newImg.alt = img.alt;
+        return newImg;
+      });
+
+      newImgs.forEach(newImg => img.parentNode.insertBefore(newImg, img));
+      img.remove();
+    }
+  });
+});
+</script>
