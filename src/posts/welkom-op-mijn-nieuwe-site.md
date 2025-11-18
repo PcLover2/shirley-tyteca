@@ -1,4 +1,4 @@
 ---
-title: Welkom op mijn nieuwe site!
+title: Welkom op mijn site!
 facebookurl: https://www.facebook.com/shirley.tyteca/
 ---
