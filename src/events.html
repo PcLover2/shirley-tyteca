@@ -40,53 +40,48 @@ path: home
 </style>
 <div class="content">
   <section style="margin-bottom: 30px;">
-    <h1>Joepie, enkele leuke yoga events en samenwerkingen komen eraan in 2025!</h1>
-        
-    <div class="imageflexer event" style="display: flex; flex-direction: row; height: fit-content;">
-      
-      <div style="flex: 50%; position: relative;">
-        <div class="imgflexie" style="background-image: url(https://shirleytyteca.be/static/img/Sam.jpg);"></div>
-      </div>
-      <div style="flex: 50%;">
-        <div class="event">
-          <h2>🌈 11/2 en 6/5: Yoga en Klankbad</h2>
-          <p>Eerst een ruim uur de diepe weldaad van pralaya yoga. Erna, in de shavasana, zakken we een klein uurtje dieper met klankschalen, gong, native fluit... 
-          Niet enkel ontspannend want klank werkt in op alle lagen van onszelf: een totale harmonisering van fysiek, mentaal en emotioneel lichaam. Een aanrader!</p>
-          <p>Telkens van 18u30-20u30</p>
-          <p style="color: #550000;">Opgelet: dit vervangt de beginners- en intermediateles</p>
-          <p>Locatie: Houtsaegerstadion Koksijde (VIP-zaal)</p>
-          <p>Graag inschrijven via contactformulier of berichtje. 🩵</p>
-          <p class="price">25 euro</p>
-        </div>
-      </div>
-    </div>
-    <div class="event">
-      <div class="imageflexer" style="display: flex; flex-direction: row; height: fit-content;">
-        
+    <h1>Joepie, enkele leuke yoga events en samenwerkingen komen eraan in {{ "now" | date("YYYY") }}!</h1>
+
+    {% for event in collections.events | sortByDate %}
+      <div class="imageflexer event">
         <div style="flex: 50%; position: relative;">
-          <div class="imgflexie" style="background-image: url(/static/img/22maart1.jpg); background-size: contain; background-repeat: no-repeat;"></div>
+          {% if event.data.images and event.data.images | length > 0 %}
+            <div class="imgflexie" style="background-image: url({{ event.data.images[0].image }});"></div>
+          {% endif %}
         </div>
         <div style="flex: 50%;">
           <div class="event">
-            <h2>🌈 22/3: Bloom into Spring</h2>
-            <p>Dompel jezelf onder in een dagje zelfzorg om met vernieuwde energie de lente in te gaan. Shirley, Katrien en Sam begeleiden je elk vanuit hun eigen passie 
-            om los te maken wat in de winter wat ondergesneeuwd of vastgeroest is geraakt.</p>
-            <p>Wat je persoonlijke intentie ook is om in de lente te laten groeien en bloeien, dit zaadje zal hier voeding krijgen.</p>
-            <p>Je gaat naar huis met een diepere verbinding met jezelf, een gevoel van balans tussen rust en actie, en hernieuwde kracht om je hartsverlangen nieuw leven in te blazen.</p>
-            <p>Graag inschrijven via contactformulier of berichtje. 🩵</p>
-            <p class="price">125 euro</p>
+            <h2>{{ event.data.title }}</h2>
+            {% if event.data.date %}
+              <p>{{ event.data.date | date("DD/MM/YYYY") }}</p>
+            {% endif %}
+            {% if event.data.location %}
+              <p>Locatie: {{ event.data.location }}</p>
+            {% endif %}
+            {% if event.data.body %}
+              <div>{{ event.templateContent | safe }}</div>
+            {% endif %}
+            {% if event.data.price %}
+              <p class="price">{{ event.data.price }}</p>
+            {% endif %}
           </div>
         </div>
       </div>
-      <img src="/static/img/22maart2.jpg" alt="Bloom into Spring - Afbeelding 2">
-      <img src="/static/img/22maart3.jpg" alt="Bloom into Spring - Afbeelding 3">
-  </div>
+
+      {% if event.data.images and event.data.images | length > 1 %}
+        {% for img in event.data.images offset:1 %}
+          <img src="{{ img.image }}" alt="{{ event.data.title }} - Afbeelding">
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
 
     <div class="event">
       <h2>Let's rolllllll de matjes 😉</h2>
       <h2>Liefs, Shishi</h2>
-  </div>
+    </div>
+
   </section>
+
   <div class="cta">
     <p style="color: #1a535c; font-weight: bold;">Wil je me boeken?</p>
     <a class="button1" href="../#contact">
@@ -94,6 +89,7 @@ path: home
     </a>
   </div>
 </div>
+
 <style>
   .cta {
     background-color: #bbccce;
