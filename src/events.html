@@ -67,13 +67,14 @@ path: home
           </div>
         </div>
       </div>
-
+    
       {% if event.data.images and event.data.images | length > 1 %}
-        {% for img in event.data.images offset:1 %}
+        {% for img in event.data.images[1:] %}
           <img src="{{ img.image }}" alt="{{ event.data.title }} - Afbeelding">
         {% endfor %}
       {% endif %}
     {% endfor %}
+
 
     <div class="event">
       <h2>Let's rolllllll de matjes 😉</h2>
