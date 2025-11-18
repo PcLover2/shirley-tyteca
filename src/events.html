@@ -51,7 +51,7 @@ path: home
   </script>
 
 
-    {% for event in collections.events | sortByDate %}
+    {% for event in collections.events %}
       <div class="imageflexer event">
         <div style="flex: 50%; position: relative;">
           {% if event.data.images and event.data.images | length > 0 %}
