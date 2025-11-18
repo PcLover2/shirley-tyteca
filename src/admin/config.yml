@@ -36,6 +36,7 @@ collections:
         name: "images"
         widget: "list"
         allow_add: true
+        min: 1
         field:
           label: "Afbeelding"
           name: "image"
