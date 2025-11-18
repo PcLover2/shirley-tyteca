@@ -64,16 +64,14 @@ path: home
       <div class="event">
         <h2>{{ event.data.title }}</h2>
         {% if event.data.datum %}
-          <p>{{ event.data.datum }}</p>
+          <p>Datum: {{ event.data.datum }}</p>
         {% endif %}
         {% if event.data.location %}
           <p>Locatie: {{ event.data.location }}</p>
         {% endif %}
-        {% if event.data.body %}
-          <p>{{ event.data.body}}</p>
-        {% endif %}
+        {{ event.templateContent | safe }}
         {% if event.data.price %}
-          <p class="price">{{ event.data.price }}</p>
+          <p class="price">Prijs: {{ event.data.price }}</p>
         {% endif %}
       </div>
     </div>
