@@ -40,7 +40,16 @@ path: home
 </style>
 <div class="content">
   <section style="margin-bottom: 30px;">
-    <h1>Joepie, enkele leuke yoga events en samenwerkingen komen eraan in {{ "now" | date("YYYY") }}!</h1>
+  <h1>Joepie, enkele leuke yoga events en samenwerkingen komen eraan in <span id="currentYear"></span>!</h1>
+  
+  <script>
+    // Get the current year
+    const year = new Date().getFullYear();
+    
+    // Insert it into the span
+    document.getElementById('currentYear').textContent = year;
+  </script>
+
 
     {% for event in collections.events | sortByDate %}
       <div class="imageflexer event">
