@@ -31,7 +31,11 @@ module.exports = function (eleventyConfig) {
     "./node_modules/prismjs/themes/prism-tomorrow.css":
       "./static/css/prism-tomorrow.css",
   });
-
+  // Custom short date filter
+  eleventyConfig.addFilter("shortDate", (dateObj) => {
+    if (!dateObj) return "";
+    return DateTime.fromJSDate(dateObj).toFormat("dd/MM/yy");
+  });
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
 
