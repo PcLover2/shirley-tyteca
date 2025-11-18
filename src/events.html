@@ -78,11 +78,9 @@ path: home
           </div>
         </div>
     
-      {% if event.data.images and event.data.images | length > 1 %}
-        {% for img in event.data.images | slice(1) %}
-          <img src="{{ img }}" alt="{{ event.data.title }} - Afbeelding">
-        {% endfor %}
-      {% endif %}
+    {% for img in event.data.images | slice(1) %}
+      <img src="{{ img }}" alt="{{ event.data.title }} - Afbeelding">
+    {% endfor %}
 
       </div>
     {% endfor %}
