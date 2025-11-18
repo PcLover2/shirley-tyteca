@@ -1,6 +1,6 @@
 ---
 title: Titel
-date: 18/11/25
+datum: 18/11/25
 location: De Panne
 price: 0 euro
 images:
