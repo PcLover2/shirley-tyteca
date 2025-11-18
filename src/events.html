@@ -53,34 +53,38 @@ path: home
 
     {% for event in collections.events %}
       <div class="event">
-        <div class="imageflexer" style="display: flex; flex-direction: row; height: fit-content;">
-          <div style="flex: 50%; position: relative;">
-            {% if event.data.images and event.data.images | length > 0 %}
-              <div class="imgflexie" style="background-image: url('{{ event.data.images[0] }}');"></div>
-            {% endif %}
-          </div>
-          <div style="flex: 50%;">
-            <div class="event">
-              <h2>{{ event.data.title }}</h2>
-              {% if event.data.date %}
-                <p>{{ event.data.date }}</p>
-              {% endif %}
-              {% if event.data.location %}
-                <p>Locatie: {{ event.data.location }}</p>
-              {% endif %}
-              {% if event.data.body %}
-                <p>{{ event.data.body}}</p>
-              {% endif %}
-              {% if event.data.price %}
-                <p class="price">{{ event.data.price }}</p>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-    
-    {% for img in event.data.images | slice(1) %}
-      <img src="{{ img }}" alt="{{ event.data.title }} - Afbeelding">
-    {% endfor %}
+{% if event.data.images and event.data.images | length > 0 %}
+  <!-- First image as background -->
+  <div class="imageflexer" style="display: flex; flex-direction: row; height: fit-content;">
+    <div style="flex: 50%; position: relative;">
+      <div class="imgflexie" style="background-image: url('{{ event.data.images[0] }}');"></div>
+    </div>
+
+    <div style="flex: 50%;">
+      <div class="event">
+        <h2>{{ event.data.title }}</h2>
+        {% if event.data.date %}
+          <p>{{ event.data.date }}</p>
+        {% endif %}
+        {% if event.data.location %}
+          <p>Locatie: {{ event.data.location }}</p>
+        {% endif %}
+        {% if event.data.body %}
+          <p>{{ event.data.body}}</p>
+        {% endif %}
+        {% if event.data.price %}
+          <p class="price">{{ event.data.price }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Remaining images -->
+  {% for img in event.data.images | slice(1) %}
+    <img src="{{ img }}" alt="{{ event.data.title }} - Afbeelding">
+  {% endfor %}
+{% endif %}
+
 
       </div>
     {% endfor %}
