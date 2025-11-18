@@ -17,11 +17,16 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  // Short date filter (e.g., 18/11/25)
+  eleventyConfig.addFilter("shortDate", (dateObj) => {
+    if (!dateObj) return "";
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("dd/MM/yy");
+  });
+
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 
   // To Support .yaml Extension in _data
-  // You may remove this if you can use JSON
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
 
   // Copy Static Files to /_Site
@@ -31,11 +36,7 @@ module.exports = function (eleventyConfig) {
     "./node_modules/prismjs/themes/prism-tomorrow.css":
       "./static/css/prism-tomorrow.css",
   });
-  // Custom short date filter
-  eleventyConfig.addFilter("shortDate", (dateObj) => {
-    if (!dateObj) return "";
-    return DateTime.fromJSDate(dateObj).toFormat("dd/MM/yy");
-  });
+
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
 
@@ -44,7 +45,6 @@ module.exports = function (eleventyConfig) {
 
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
     if (outputPath.endsWith(".html")) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
@@ -57,8 +57,6 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
-  // Let Eleventy transform HTML files as nunjucks
-  // So that we can use .html instead of .njk
   return {
     dir: {
       input: "src",
