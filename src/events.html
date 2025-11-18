@@ -63,16 +63,7 @@ path: home
     <div style="flex: 50%;">
       <div class="event">
         <h2>{{ event.data.title }}</h2>
-        {% if event.data.datum %}
-          <p>Datum: {{ event.data.datum }}</p>
-        {% endif %}
-        {% if event.data.location %}
-          <p>Locatie: {{ event.data.location }}</p>
-        {% endif %}
         {{ event.templateContent | safe }}
-        {% if event.data.price %}
-          <p class="price">Prijs: {{ event.data.price }}</p>
-        {% endif %}
       </div>
     </div>
   </div>
