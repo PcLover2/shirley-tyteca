@@ -8,16 +8,6 @@ public_folder: "/static/img"
 local_backend: true
 
 collections:
-  # Blog stays as-is
-  - label: "Blog"
-    name: "blog"
-    folder: "src/posts"
-    create: true
-    editor:
-      preview: false
-    fields:
-      - { label: "Text", name: "title", widget: "string" }
-      - { label: "Facebook Link", name: "facebookurl", widget: "string", default: "https://www.facebook.com/shirley.tyteca/" }
 
   # NEW Events collection
   - label: "Events"
