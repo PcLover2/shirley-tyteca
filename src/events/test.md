@@ -1,7 +1,6 @@
 ---
-title: Test-Titel
+title: Voorbeeld  van een event-titel
 images:
   - /static/img/22maart1.jpg
-  - /static/img/MOMENTSBYMAGA-ShishiYOGA-52.jpg
 ---
-Dit is de body
+Hier plaats je de tekst van de event, met info over prijs, locatie etc.
