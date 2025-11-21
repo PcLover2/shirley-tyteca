@@ -24,6 +24,14 @@
     
       gtag('config', 'G-L3RTBCZGGD');
     </script>
+    <script>
+  const hash = window.location.hash;
+
+  if (hash.startsWith('#invite_token=') || hash.startsWith('#recovery_token=')) {
+    window.location.href = 'https://shirleytyteca.be/admin#thehastagthing';
+  }
+</script>
+
   </head>
   <body>
     {% include "./partials/navbar.html" %}
