@@ -5,8 +5,6 @@ images:
   - /static/img/4.jpg
   - /static/img/5.jpg
 ---
-🌟Y﻿oga- en klankbad🌟
-
 Op dinsdag 10 maart verenigen Sam en ik onze krachten om jullie op een zachte manier in lentemodus te laten overgaan. Focusthema is de borst. We openen onze borst, maken bindweefsel los en ademen ons vrij met de Pralaya yogahoudingen. Erna landen we zacht in diepe ontspanning dankzij de diepe trillingen van de klankschalen en alle verschillende instrumenten waarmee Sam ons verrast!\
 \
 💫locatie: VIP-zaal Koksijde (Houtsaegerstadion, sportcentrum Koksijde)\
